@@ -1,7 +1,6 @@
 # MusicSearch v1
 
 MusicSearch ist ein Lernprojekt. Wir zeigen, wie man ein Python-Skript erstellt, das nach einem, vom Benutzer eingegebenen, Suchbegriff in der Datenbank von Apple iTunes Musiktitel und Interpreten sucht.
-___
 
 <table>
   <tr>
@@ -14,7 +13,6 @@ ___
   </tr>
 </table>
 
-___
 
 #### Konkret zeigt Version 1.0 wie man 
 
