@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tk-music-search"
+version = "0.4.0"
+description = "Learning project: Tk GUI for iTunes search with clean architecture"
+readme = "docs/README.md"
+requires-python = ">=3.8"
+authors = [{name = "Henriette Baum"}]
+
+dependencies = [
+    "requests>=2.28.0",
+    "customtkinter>=5.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+]
+
+[project.urls]
+Homepage = "https://computer-und-sehen.de"
+Homepage = "https://github.com/henrietteBaum/myTk"
+Repository = "https://github.com/henrietteBaum/myTk.git"
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
