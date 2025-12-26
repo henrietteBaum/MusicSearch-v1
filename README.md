@@ -5,7 +5,7 @@ MusicSearch ist ein Lernprojekt. Wir zeigen, wie man ein Python-Skript erstellt,
 <table>
   <tr>
     <td>
-      <img src="Documentation/assets/musicsearch-02.png" width="300">
+      <img src="Documentation/assets/musicsearch-02.png" width="200">
     </td>
     <td>
       <h3> MusicSearch mit Python und Tkinter
