@@ -24,6 +24,9 @@ MusicSearch ist ein Lernprojekt. Wir zeigen, wie man ein Python-Skript erstellt,
 
 Die **Versionen 1.1 bis 1.4** erklären, wie man die Funktionslogik mit einer grafischen Benutzeroberfläche verbindet. Dazu wird Tkinter verwendet.
 
+Eine kurze Einführung zu objektorientierter Programmierung mit Tkinter finden Sie im Verzeichnis:
+`Documentation/tk-oop-basic`
+
 **Version 1.5** trennt Programmlogik und Benutzeroberfläche.
 
 
