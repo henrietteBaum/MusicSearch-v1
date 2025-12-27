@@ -5,3 +5,24 @@ Documentation/tk-oop-basic/.quarto/project-cache/deno-kv-file-wal
 Documentation/tk-oop-basic/.quarto/xref/18984b40
 Documentation/tk-oop-basic/.quarto/xref/ea71b7ca
 Documentation/tk-oop-basic/.quarto/xref/INDEX
+
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.vscode/
+
+
+# Quarto
+
+**/Documentation/libs/
+**/Documentation/quarto/
+**/Documentation/_site/
+**/Documentation/.quarto/
+
+
+# Optional global
+.quarto/
+_site/
+
