@@ -1,3 +1,11 @@
+"""
+Docstring for musicsearch-tk-v1.1
+GUI with two frames (search and results).
+Font and font size have been adjusted.
+The results are displayed in a label element.
+
+"""
+
 import tkinter as tk
 from tkinter import ttk
 from tkinter.messagebox import showinfo

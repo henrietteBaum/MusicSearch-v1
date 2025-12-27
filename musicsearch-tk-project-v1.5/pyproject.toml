@@ -3,7 +3,7 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tk-music-search"
+name = "music-search-tk"
 version = "0.4.0"
 description = "Learning project: Tk GUI for iTunes search with clean architecture"
 readme = "docs/README.md"

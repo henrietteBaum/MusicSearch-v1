@@ -1,8 +1,8 @@
 """
-Docstring for tk-music-search.gui_main_v-0.2
+Docstring for musicsearch-tk v1.2
 Change the Widget to show the search results from Label to ScrolledText.
 The results now can be copied and reused.
-
+Add fg-color to app-heading
 """
 
 import tkinter as tk

@@ -1,9 +1,7 @@
 """
-Docstring for tk-music-search.gui_main_v-0.2
+Docstring for musicsearch-tk v1.3
 Show the search results from Label to ScrolledText,
 search history added inside a Label.
-
-
 """
 
 import tkinter as tk

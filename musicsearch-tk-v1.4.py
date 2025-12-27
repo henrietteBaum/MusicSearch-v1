@@ -159,7 +159,6 @@ class SearchFrame(ctk.CTkFrame):
             text_color="black"
         ).grid(row=1, column=2, rowspan=2, padx=10, pady=10)
 
-       
         self.pack(pady=10, padx=20, fill="both")
 
     def search(self):
