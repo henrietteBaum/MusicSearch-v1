@@ -25,7 +25,9 @@ class AppConfig:
     @classmethod
     def from_dict(cls, config_dict: dict) -> "AppConfig":
         """Create config from dictionary."""
-        return cls(**config_dict)
+        # return cls(**config_dict)
+        return cls(**{k: v for k, v in config_dict.items() if k in cls.__dataclass_fields__})
+
 
     def to_dict(self) -> dict:
         """Convert config to dictionary."""

@@ -1,15 +1,16 @@
 # MusicSearch v1
 
-MusicSearch ist ein Lernprojekt in Python, das zeigt, wie man mit einer Suchanfrage Musikinformationen aus der iTunes-Datenbank abruft und darstellt – zuerst als Konsolen-Script und später mit einer grafischen Oberfläche (Tkinter). 
 
 
 <table>
   <tr>
     <td>
-      <img src="Documentation/assets/musicsearch-logo.png" width="150">
+      <img src="Documentation/assets/musicsearch-logo.png" width="180">
     </td>
     <td>
-      <h3> MusicSearch mit Python und Tkinter
+      <h3> MusicSearch mit Python und Tkinter </h3>
+      <p> MusicSearch ist ein Lernprojekt in Python, das zeigt, wie man mit einer Suchanfrage Musikinformationen aus der iTunes-Datenbank abruft und darstellt – zuerst als Konsolen-Script und später mit einer grafischen Oberfläche (Tkinter).
+      </p>
     </td>
   </tr>
 </table>

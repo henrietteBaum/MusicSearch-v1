@@ -16,6 +16,8 @@ ctk.set_default_color_theme("dark-blue")
 ctk.set_widget_scaling(3.0)
 ctk.set_window_scaling(1.8)
 
+BASE_URL = "https://itunes.apple.com/search"
+
 
 class App(ctk.CTk):
     def __init__(self):
@@ -230,7 +232,6 @@ class ResultFrame(ctk.CTkFrame):
         self.pack(pady=20, padx=20, fill="both")
 
     def perform_search(self, term, limit=5):
-        BASE_URL = "https://itunes.apple.com/search"
 
         payload = {
             "term": term,

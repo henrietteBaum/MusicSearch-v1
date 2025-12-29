@@ -182,9 +182,11 @@ class SearchFrame(ctk.CTkFrame):
     def search(self):
         """Execute search."""
         term = self.search_term.get().strip()
-        if not term:
+        #if not term:
+        if term == self.placeholder_text or not term:
             showerror("Info", "Please enter a search term!")
             return
+
 
         # Parse limit
         limit_str = self.result_limit.get().strip().lower()
