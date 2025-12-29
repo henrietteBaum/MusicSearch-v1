@@ -10,6 +10,8 @@ from tkinter import ttk, scrolledtext
 from tkinter.messagebox import showerror
 import requests
 
+BASE_URL = "https://itunes.apple.com/search"
+
 
 class App(tk.Tk):
     def __init__(self):
@@ -129,15 +131,21 @@ class ResultFrame(ttk.Frame):
         self.result_txt.pack(pady=20, fill="x", expand=True)
 
         self.result_txt.configure(state="normal")
-        self.result_txt.insert("1.0", "Results com here ...")
+        self.result_txt.insert("1.0", "Results come here ...")
         self.result_txt.configure(state="disabled")
 
         self.pack(pady=20)
+          
 
     def perform_search(self, term, limit=5):
         #showinfo(title="Info", message=(f"Searching for: {term}"))
 
-        BASE_URL = "https://itunes.apple.com/search"
+        def _show_error(self, exc):
+            self.result_txt.configure(state="normal")
+            self.result_txt.delete("1.0", "end")
+            self.result_txt.insert("1.0", f"Error on request:\n{exc}")
+            self.result_txt.configure(state="disabled")
+            
 
         payload = {
             "term": term,
@@ -150,14 +158,15 @@ class ResultFrame(ttk.Frame):
             response.raise_for_status()
             data = response.json()
         except Exception as exc:
-            self.result_txt.config(text=("Error on request:\n{str(exc)}"))
+            self._show_error(exc)
+            #self.result_txt.config(text=f"Error on request:\n(exc)")
             return
         
 
         result_count = data["resultCount"]
 
         output_lst  = []
-        output_lst.append(f'Resuls found for term "{term}": {result_count}\n')
+        output_lst.append(f'Results found for term "{term}": {result_count}\n')
 
         for result in data["results"]:
             artist = result["artistName"]
@@ -174,11 +183,11 @@ class ResultFrame(ttk.Frame):
         self.result_txt.configure(state="disabled") # close
 
 
-        def _show_error(self, exc):
-            self.result_txt.configure(state="normal")
-            self.result_txt.delete("1.0", "end")
-            self.result_txt.insert("1.0", f"Error on request:\n{exc}")
-            self.result_txt.configure(state="disabled")
+    def _show_error(self, exc):
+        self.result_txt.configure(state="normal")
+        self.result_txt.delete("1.0", "end")
+        self.result_txt.insert("1.0", f"Error on request:\n{exc}")
+        self.result_txt.configure(state="disabled")
             
 
 if __name__ == "__main__":

@@ -11,6 +11,9 @@ from tkinter import ttk
 from tkinter.messagebox import showinfo
 import requests
 
+BASE_URL = "https://itunes.apple.com/search"
+
+
 
 class App(tk.Tk):
     def __init__(self):
@@ -76,7 +79,7 @@ class ResultFrame(ttk.Frame):
 
         self.result_lbl = ttk.Label(
             self, 
-            text=("Results com here..."),
+            text=("Results come here..."),
             justify="left",
             font=("Carlito", 14)
         )
@@ -86,20 +89,18 @@ class ResultFrame(ttk.Frame):
     def perform_search(self, term):
         showinfo(title="Info", message=(f"Searching for: {term}"))
 
-        BASE_URL = "https://itunes.apple.com/search"
-
-        payloyd = {
+        payload = {
             "term": term,
             "entity": "album",
             "limit": 5
             }
 
         try:
-            response = requests.get(BASE_URL, params=payloyd, timeout=10)
+            response = requests.get(BASE_URL, params=payload, timeout=10)
             response.raise_for_status()
             data = response.json()
         except Exception as exc:
-            self.result_lbl.config(text=("Error on request:\n{exc}"))
+            self.result_lbl.config(text=f"Error on request:\n{exc}")
             return
         
         if data.get("resultCount", 0) == 0:
@@ -109,7 +110,7 @@ class ResultFrame(ttk.Frame):
         result_count = data["resultCount"]
 
         output_lst  = []
-        output_lst.append(f'Resuls found for term "{term}": {result_count}\n')
+        output_lst.append(f'Results found for term "{term}": {result_count}\n')
 
         for result in data["results"]:
             artist = result["artistName"]
