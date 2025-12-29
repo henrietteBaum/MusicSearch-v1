@@ -23,9 +23,7 @@ MusicSearch ist ein Lernprojekt in Python, das zeigt, wie man mit einer Suchanfr
   - v1.1 – v1.4: GUI mit **Tkinter**
   - v1.5: Trennung von Logik und UI
 
-<img src="screenshots/ms-v1.0.png" width="28%">
-<img src="screenshots/ms-v1.1.png" width="28%"> 
-<img src="screenshots/ms-v1.5.png" width="28%">
+<img src="screenshots/ms-v1.0.png" width="28%"> <img src="screenshots/ms-v1.1.png" width="28%"> <img src="screenshots/ms-v1.5.png" width="28%">
   
 ## Voraussetzungen
 
